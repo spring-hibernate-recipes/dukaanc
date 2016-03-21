@@ -1,5 +1,4 @@
 <?php
-	include_once('auth.php');
 	include_once('functions.php');
 
 	$location = $_REQUEST["loc"];

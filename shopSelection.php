@@ -1,4 +1,5 @@
 <?php
+include_once 'functions.php';
 $city = $_SESSION ["city"];
 ?>
 <!DOCTYPE HTML>
@@ -18,7 +19,7 @@ $city = $_SESSION ["city"];
 <script type="text/javascript" src="functions.js"></script>
 <script type="text/javascript">
 	$(document).ready(function(){
-		$.get('fn/locations.php', function(response){
+		$.get('fn/locations.php?city=<?php echo $city?>', function(response){
 			var html = '';
 			$.each(response, function(k, row){
 				html += '<option>' + row['locality'] + '</option>';

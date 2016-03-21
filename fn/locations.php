@@ -2,7 +2,7 @@
 	include_once('auth.php');
 	include_once('functions.php');
 	
-	$city = $_SESSION["city"];
+	$city = $_REQUEST["city"];
 
 	$sql = "select distinct(locality) from shopkeeper where city='$city'";
 	$result = query($sql);

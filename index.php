@@ -1,3 +1,4 @@
+<?php include_once 'functions.php';?>
 <!DOCTYPE HTML>
 <html>
 <head>
@@ -21,6 +22,7 @@
 		<div class="row vertical-center-row">
 			<div style="text-align: center">
 			<?php if(isset($_REQUEST["err"])){echo "Email Address/Password invalid. Please retry.<br>";} ?>
+			<?php if(isset($_SESSION["msg"])){echo "$_SESSION[msg]"; unset($_SESSION["msg"]);} ?>
 			</div>
 			<div class="text-center col-md-4 col-md-offset-4">
 				<div class="panel panel-default">
@@ -43,7 +45,7 @@
 							</div>
 							<div class="form-group">
 								<button type="submit" class="btn btn-primary" id="loginBtn">Login</button>
-								&nbsp;&nbsp;<a href="signup.php" class="btn btn-warning">Sign Up</a>
+								&nbsp;&nbsp;<a href="signUp.php" class="btn btn-warning">Sign Up</a>
 							</div>
 						</form>
 					</div>

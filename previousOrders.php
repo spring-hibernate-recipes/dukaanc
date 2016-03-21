@@ -39,7 +39,7 @@ $emailAddress = $_SESSION ["emailAddress"];
 		$sql = "select * from `order` where customerEmail='$emailAddress' and shopkeeperEmail='$shopkeeperEmail'";
 		$orders = query ( $sql );
 		if ($orders == null || count ( $orders ) <= 0) {
-			echo "You do not have any previous orders with this shopkeeper.<br>";
+			echo "You do not have any previous orders with this shopkeeper.<br><br>";
 			echo '<a href="home.php" class="btn btn-primary">Home</a>';
 		} else {
 			?>
